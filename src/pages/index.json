@@ -1,0 +1,15 @@
+{
+    "title": "Homepage",
+    "template": "homepage",
+    "content": "Some content for the homepage",
+    "people": [
+        {
+            "name": "Ronald McDonald",
+            "url": "/about/people/person-3"
+        },
+        {
+            "name": "Frank Reynolds",
+            "url": "/about/people/person-2.html"
+        }
+    ]
+}

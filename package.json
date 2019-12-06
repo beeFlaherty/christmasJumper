@@ -1,0 +1,81 @@
+{
+  "private": true,
+  "name": "fe-webpack-boilerplate-core",
+  "version": "1.4.0",
+  "description": "The core FE boilerplate used by AR developer to build web pages and apps.",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development npm run webpack-with-server -- --hot",
+    "build": "cross-env NODE_ENV=production npm run webpack-no-server",
+    "webpack-with-server": "webpack-dev-server --config ./configs/webpack.config.js",
+    "webpack-no-server": "webpack --config ./configs/webpack.config.js",
+    "test": "cross-env NODE_ENV=test node scripts/test.js",
+    "test:coverage": "cross-env NODE_ENV=test node scripts/test.js --coverage",
+    "lint": "eslint . --ext .js --cache",
+    "stylelint": "stylelint \"src/**/*.scss\"",
+    "html": "node lib/generatePages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/amazerealise-fe-group/fe-boilerplate.git"
+  },
+  "author": "AmazeRealise",
+  "bugs": {
+    "url": "https://gitlab.com/amazerealise-fe-group/fe-boilerplate/issues"
+  },
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run stylelint"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "~7.4.5",
+    "chokidar": "^3.2.1",
+    "handlebars": "4.2.0",
+    "html-minifier": "^4.0.0",
+    "recursive-readdir": "2.2.2"
+  },
+  "devDependencies": {
+    "@amazerealise/eslint-config": "0.1.1",
+    "@amazerealise/stylelint-config": "0.1.2",
+    "@babel/core": "~7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "~7.4.4",
+    "autoprefixer": "~9.5.1",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "~8.0.5",
+    "clean-webpack-plugin": "~2.0.1",
+    "copy-webpack-plugin": "~5.0.3",
+    "core-js": "^3.2.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "~2.1.1",
+    "cssnano": "~4.1.10",
+    "dotenv": "~8.0.0",
+    "eslint": "~5.16.0",
+    "eslint-config-airbnb-base": "~13.1.0",
+    "eslint-loader": "~2.1.2",
+    "eslint-plugin-import": "~2.17.2",
+    "husky": "~2.4.1",
+    "imagemin-mozjpeg": "~8.0.0",
+    "imagemin-webpack-plugin": "~2.4.2",
+    "jest": "^24.8.0",
+    "jest-environment-jsdom-fourteen": "^0.1.0",
+    "jest-resolve": "^24.8.0",
+    "jest-watch-typeahead": "^0.3.1",
+    "mini-css-extract-plugin": "~0.8.0",
+    "node-sass": "~4.12.0",
+    "postcss-loader": "~3.0.0",
+    "sass-loader": "~7.1.0",
+    "style-loader": "~0.23.1",
+    "stylelint": "~10.0.1",
+    "stylelint-webpack-plugin": "~0.10.5",
+    "webpack": "~4.30.0",
+    "webpack-cli": "~3.3.5",
+    "webpack-dev-server": "~3.3.1",
+    "webpackbar": "^3.2.0",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

@@ -1,0 +1,209 @@
+@import "./reset.scss";
+
+$width: 200px;
+$height:200px;
+
+$greenBlack: #252826;
+$greenDark: #165B33;
+$greenLight: #7F9539;
+$greenLightest:#D4C574;
+$nutral: #E9E2B4;
+$aqua: #0AAE9F;
+$red: #BB2528;
+$orange: #EA4630;
+$yellow: #F8B229;
+$whiteish: #EBE8DF;
+$brown: #5E2612;
+$lightBrown: #887338;
+$purple: #2E4C9D;
+$lilac: #777BA6;
+$grey: #888282;
+$lightgrey: #9B9B9B;
+
+
+.container {
+	height: $height;
+	width: $width;
+	overflow: hidden;
+}
+
+.landingContainer {
+	position: relative;
+	background: $lilac;
+}
+
+.action-button {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	z-index: 2;
+	background: $orange;
+	color: #FFF;
+	border: 0;
+	border-radius: 10%;
+	padding: 2px 10px;
+	font-family: Nunito, sans-serif;
+}
+
+.makeContainer,
+.madeContainer {
+	background: $nutral;
+	position: relative;
+}
+
+.hidden {
+	display: none;
+}
+
+
+.canvasContainer {
+	margin-top: 10px;
+	z-index: 10;
+	text-align: center;
+
+	canvas {
+		background: #FFF;
+	}
+}
+
+.toolsContainer {
+	padding: 8px 0 0;
+	text-align: center;
+
+	.label {
+		display: inline-block;
+		font-family: Nunito, sans-serif;
+		height: 20px;
+		padding: 2px;
+		position: relative;
+		top: -2px;
+	}
+
+	.color {
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		border: 2px solid transparent;
+
+		&.small {
+			width: 20px;
+			height: 20px;
+		}
+
+		&.active {
+			border: 2px solid $greenBlack;
+		}
+	}
+
+}
+
+.restart {
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	bottom: 5px;
+	background: transparent;
+	border-color: transparent $orange;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 0.125em;
+	height: 1.1em;
+	margin: 0.25em;
+	width: 1.1em;
+
+	&.final {
+		left: auto;
+		right: 10px;
+	}
+
+	&::before,
+	&::after {
+		border-style: solid;
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		transform: rotate(-45deg);
+	}
+
+	&::after {
+		border-color: transparent transparent transparent $orange;
+		border-width: 0.3125em 0 0.3125em 0.5em;
+		top: -0.3125em;
+		left: 0.0625em;
+	}
+
+	&::before {
+		border-color: transparent $orange transparent transparent;
+		border-width: 0.3125em 0.5em 0.3125em 0;
+		bottom: -0.3125em;
+		right: 0.0625em;
+	}
+}
+
+
+.jumperContainer {
+	height: 90px;
+	width: 110px;
+	position: relative;
+	margin-top: 65px;
+	margin-left: 44px;
+	z-index: 2;
+	font-size: 7px;
+
+	span {
+		display: block;
+		text-align: center;
+		position: absolute;
+		font-family: sans-serif;
+		font-weight: bold;
+	}
+
+	&.home {
+		margin-top: 40px;
+		margin-left: 43px;
+	}
+
+}
+
+.jumper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	&.home {
+		width: 190px;
+		left: 5px;
+	}
+}
+
+.jumperLight {
+	fill: lighten($lightgrey, 20%);
+}
+
+.Background {
+	fill: lighten($lightgrey, 10%);
+}
+
+.jumperDark {
+	fill: $greenLight;
+}
+
+$greenBlack: #252826;
+$greenDark: #165B33;
+$greenLight: #7F9539;
+$greenLightest:#D4C574;
+$nutral: #E9E2B4;
+$aqua: #0AAE9F;
+$red: #BB2528;
+$orange: #EA4630;
+$yellow: #F8B229;
+$whiteish: #EBE8DF;
+$brown: #5E2612;
+$lightBrown: #887338;
+$purple: #2E4C9D;
+$lilac: #777BA6;
+$grey: #888282;
+$lightgrey: #9B9B9B;

@@ -1,0 +1,9 @@
+{
+  "extends": "@amazerealise/stylelint-config",
+  "rules": {
+    "plugin/no-unsupported-browser-features": [true, {
+      "severity": "warning"
+    }],
+	"at-rule-no-unknown": null
+  }
+}
