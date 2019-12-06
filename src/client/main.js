@@ -120,9 +120,11 @@ function frog() {
 }
 
 function restart() {
+	const stylesheet = document.getElementById('tempstyles');
 	frog();
 	makeContainer.classList.remove('hidden');
 	madeContainer.classList.add('hidden');
+	stylesheet.parentNode.removeChild(stylesheet);
 }
 
 function addStyles() {
